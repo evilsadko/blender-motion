@@ -38,3 +38,12 @@ for ixx in range(0, 1):
                      for mY in range(0, 416, 36):
                        newImg[mY+5:mY+(36-5), mX+5:mX+(36-5)] = random.choice(_color)#kernal[:,:,step]#kernal[:,:,iXx]
                  imgs(newImg)
+			
+
+def chunks(lst, count):
+    start = 0
+    for i in range(count):
+          stop = start + len(lst[i::count])
+          yield lst[start:stop]
+          start = stop 
+test = chunks(temp_list,40)			
